@@ -1,21 +1,27 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import { Admin, Client, Login, Register, Trainer } from "../pages/index";
+import { PublicRoutes } from "./Public/PublicRoutes";
+import { PrivateRoutes } from "./Private/PrivateRoutes";
+import { Route, Routes } from "react-router-dom";
+import { Login, Register, Admin, Trainer, Client } from "../pages";
 
 export const AppRouter = () => {
   return (
     <>
+      {/* <PublicRoutes> */}
       <Routes>
+        <Route index element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+      </Routes>
+      {/* </PublicRoutes> */}
 
-        <Route path="/*" element={<Navigate to="/about" />} />
-
+      {/* <PrivateRoutes> */}
+      <Routes>
         <Route path="/Admin" element={<Admin />} />
         <Route path="/Trainer" element={<Trainer />} />
         <Route path="/Client" element={<Client />} />
-        <Route />
       </Routes>
+      {/* </PrivateRoutes> */}
     </>
   );
 };

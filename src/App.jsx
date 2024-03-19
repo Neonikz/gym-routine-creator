@@ -1,6 +1,11 @@
 import React from "react";
+import { ErrorBoundary } from "./router/Errors/ErrorBoundary";
 import { AppRouter } from "./router/AppRouter";
 
 export const App = () => {
-  return <AppRouter />;
+  return (
+    // <AppProvider>
+    <AppRouter />
+    // </AppProvider>
+  );
 };

@@ -1,0 +1,17 @@
+.error-div {
+  font-family: Arial, Helvetica, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error {
+  font-size: 2rem;
+}
+
+.msg {
+  font-size: 1rem;
+}
